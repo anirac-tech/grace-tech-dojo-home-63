@@ -20,12 +20,12 @@ const Hero = () => {
           <h1 
             className={`text-3xl md:text-5xl font-serif font-semibold text-gray-900 mb-8 leading-tight tracking-tight transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
-            excellent software
+            excellent software crafted with purpose
           </h1>
           <p 
             className={`text-lg md:text-xl text-gray-600 mb-12 leading-relaxed tracking-wide transition-opacity duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
-            a community of faith-driven developers - serving and advancing skills; crafting tools with purpose
+            a community of faith-driven developers - serving and advancing skills
           </p>
         </div>
       </div>
