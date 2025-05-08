@@ -23,8 +23,8 @@ const Index = () => {
               </div>
             </div>
           </div>
+          <ConnectSection />
         </div>
-        <ConnectSection />
       </main>
       <Footer />
     </div>
