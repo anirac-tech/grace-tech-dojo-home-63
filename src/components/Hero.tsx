@@ -25,7 +25,7 @@ const Hero = () => {
           <p 
             className={`text-lg md:text-xl text-gray-600 mb-12 leading-relaxed tracking-wide transition-opacity duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
-            a community of faith-driven developers - serving and advancing skills
+            a community of faith-driven developers
           </p>
         </div>
       </div>
