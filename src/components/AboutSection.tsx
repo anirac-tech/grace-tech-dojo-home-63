@@ -18,8 +18,7 @@ const AboutSection = () => {
               collaboration, and pursuing leadership with integrity.
             </p>
             <p className="mb-6 leading-relaxed text-center">
-              Our shared faith in Jesus [which we hope to present with humility,
-              courage, and trust in God] grounds our work and inspires us to create
+              Our shared faith in Jesus grounds our work and inspires us to create
               tools that are purposeful, skillful, and aligned with values that
               endure, with members of our community encouraging each other as we
               build.
