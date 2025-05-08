@@ -6,8 +6,8 @@ const projects = [
   {
     title: "Black Tax & White Benefits",
     description: "A mobile reading platform for reflective engagement with justice-oriented writing and teaching.",
-    url: "https://btaxwb.org",
-    linkText: "Download App"
+    url: "https://apps.apple.com/us/app/black-tax-white-benefits/id1572458193",
+    linkText: "Download on iOS"
   },
   {
     title: "Gordon Ferguson Ministry",
@@ -19,13 +19,13 @@ const projects = [
     title: "Memverse",
     description: "Scripture memorization and review tool to help users retain and reflect on biblical passages.",
     url: "https://memverse.com",
-    linkText: "Start Memorizing"
+    linkText: "Web Platform"
   },
   {
     title: "Journey Hub",
     description: "Guided challenge-based platform supporting individuals facing instability with personalized, local resource guidance.",
-    url: "https://journeyhub.app",
-    linkText: "Explore Platform"
+    url: "#",
+    linkText: "Coming Soon"
   },
 ];
 
