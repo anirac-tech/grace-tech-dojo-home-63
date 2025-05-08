@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, url, linkText = "View Project" }: ProjectCardProps) => {
   return (
-    <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm overflow-hidden group dark:bg-gray-800">
+    <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden group dark:bg-gray-800 hover:border-dojo-300 dark:hover:border-dojo-300">
       <CardHeader className="pb-2 border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/80 transition-colors duration-300">
         <CardTitle className="text-lg font-serif text-dojo-800 dark:text-dojo-300 transition-colors duration-300">{title}</CardTitle>
       </CardHeader>

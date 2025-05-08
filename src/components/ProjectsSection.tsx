@@ -39,7 +39,7 @@ const ProjectsSection = () => {
           </h2>
           <Separator className="w-24 h-0.5 bg-dojo-300 mx-auto mb-4" />
         </div>
-        <div className="space-y-4 p-4">
+        <div className="space-y-6 p-6 bg-gray-100/50 dark:bg-gray-800/50">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}

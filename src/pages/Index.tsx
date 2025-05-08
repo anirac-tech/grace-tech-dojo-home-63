@@ -14,8 +14,8 @@ const Index = () => {
         <Hero />
         <div className="bg-gray-50 dark:bg-gray-900 py-16 md:py-24 transition-colors duration-300">
           <div className="container mx-auto px-8 md:px-12 lg:px-24">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-colors duration-300">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <div className="lg:col-span-2 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-colors duration-300">
                 <ProjectsSection />
               </div>
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-colors duration-300">
