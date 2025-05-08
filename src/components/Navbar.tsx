@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,17 +37,20 @@ const Navbar = () => {
       className={cn(
         "fixed w-full top-0 left-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white bg-opacity-95 shadow-sm py-2"
-          : "bg-transparent py-4"
+          ? "dark:bg-gray-900/95 dark:backdrop-blur-sm bg-white/95 shadow-sm py-2"
+          : "bg-transparent dark:bg-transparent py-4"
       )}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <span className="text-xl md:text-2xl font-serif font-semibold text-gray-900">
-              GraceTechDojo
-            </span>
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/" className="flex items-center">
+              <span className="text-xl md:text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100">
+                GraceTechDojo
+              </span>
+            </Link>
+            <ThemeToggle />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -54,7 +58,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-gray-700 hover:text-dojo-700 text-sm font-medium transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-dojo-700 dark:hover:text-dojo-300 text-sm font-medium transition-colors"
               >
                 {link.name}
               </Link>
@@ -62,7 +66,7 @@ const Navbar = () => {
             <Button
               asChild
               variant="outline"
-              className="ml-4 border-dojo-500 text-dojo-700 hover:bg-dojo-50"
+              className="ml-4 border-dojo-500 text-dojo-700 dark:text-dojo-300 dark:border-dojo-600 hover:bg-dojo-50 dark:hover:bg-dojo-900/50"
             >
               <Link to="/contact">Contact Us</Link>
             </Button>
@@ -79,7 +83,7 @@ const Navbar = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="h-6 w-6 text-gray-700"
+              className="h-6 w-6 text-gray-700 dark:text-gray-300"
             >
               {mobileMenuOpen ? (
                 <path
@@ -103,7 +107,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "md:hidden absolute left-0 right-0 bg-white shadow-lg transition-all duration-300 overflow-hidden",
+            "md:hidden absolute left-0 right-0 bg-white dark:bg-gray-900 shadow-lg transition-all duration-300 overflow-hidden",
             mobileMenuOpen ? "max-h-60" : "max-h-0"
           )}
         >
@@ -112,22 +116,25 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="block py-3 text-gray-700 hover:text-dojo-700 border-b border-gray-100"
+                className="block py-3 text-gray-700 dark:text-gray-300 hover:text-dojo-700 dark:hover:text-dojo-300 border-b border-gray-100 dark:border-gray-800"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="py-3">
+            <div className="py-3 flex justify-between items-center">
               <Button
                 asChild
                 variant="outline"
-                className="w-full border-dojo-500 text-dojo-700 hover:bg-dojo-50"
+                className="w-full border-dojo-500 text-dojo-700 dark:text-dojo-300 dark:border-dojo-600 hover:bg-dojo-50 dark:hover:bg-dojo-900/50"
               >
                 <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
                   Contact Us
                 </Link>
               </Button>
+              <div className="ml-4">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         </div>
