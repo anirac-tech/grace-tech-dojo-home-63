@@ -6,22 +6,26 @@ const projects = [
   {
     title: "Black Tax & White Benefits",
     description: "A mobile reading platform for reflective engagement with justice-oriented writing and teaching.",
-    technologies: ["Flutter", "Firebase", "Dart"],
+    url: "https://btaxwb.org",
+    linkText: "Download App"
   },
   {
     title: "Gordon Ferguson Ministry",
     description: "Digital platform for ministry content, providing accessible spiritual resources and teaching materials.",
-    technologies: ["React", "Node.js", "MongoDB"],
+    url: "https://gordonferguson.org",
+    linkText: "Visit Website"
   },
   {
     title: "Memverse",
     description: "Scripture memorization and review tool to help users retain and reflect on biblical passages.",
-    technologies: ["React Native", "Express", "PostgreSQL"],
+    url: "https://memverse.com",
+    linkText: "Start Memorizing"
   },
   {
     title: "Journey Hub",
     description: "Guided challenge-based platform supporting individuals facing instability with personalized, local resource guidance.",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    url: "https://journeyhub.app",
+    linkText: "Explore Platform"
   },
 ];
 
@@ -40,7 +44,8 @@ const ProjectsSection = () => {
                 key={project.title}
                 title={project.title}
                 description={project.description}
-                technologies={project.technologies}
+                url={project.url}
+                linkText={project.linkText}
               />
             ))}
           </div>
