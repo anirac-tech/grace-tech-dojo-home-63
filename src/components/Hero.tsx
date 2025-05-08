@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from "react";
-import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -14,13 +13,6 @@ const Hero = () => {
     
     return () => clearTimeout(timer);
   }, []);
-
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-gray-50 to-white">
@@ -41,13 +33,6 @@ const Hero = () => {
           >
             a community of faith-driven developers
           </p>
-          
-          <Button 
-            onClick={scrollToProjects}
-            className={`bg-dojo-700 hover:bg-dojo-800 text-white px-8 py-6 rounded-md text-lg transition-all duration-300 hover:translate-y-[-2px] flex items-center gap-2 transition-opacity duration-700 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-          >
-            See our work <ArrowDown className="h-4 w-4" />
-          </Button>
         </div>
       </div>
     </section>
