@@ -18,8 +18,8 @@ const projects = [
   {
     title: "Memverse",
     description: "Scripture memorization and review tool to help users retain and reflect on biblical passages.",
-    url: "https://memverse.com",
-    linkText: "Web Platform"
+    url: "#",
+    linkText: "In Development"
   },
   {
     title: "Journey Hub",
