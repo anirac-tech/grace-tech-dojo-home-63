@@ -15,7 +15,9 @@ const Projects = () => {
           <p className="text-xl text-gray-600 dark:text-gray-400 text-center mb-12 max-w-3xl mx-auto transition-colors duration-300">
             Explore the projects we're building to serve real needs and reflect our shared values.
           </p>
-          <ProjectsSection />
+          <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 transition-colors duration-300">
+            <ProjectsSection />
+          </div>
         </div>
       </div>
       <Footer />
