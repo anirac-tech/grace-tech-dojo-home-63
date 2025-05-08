@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Playfair Display', 'serif'],
+				mono: ['Source Code Pro', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +58,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+                dojo: {
+                    '50': '#f6f7f9',
+                    '100': '#eceef2',
+                    '200': '#d5d9e2',
+                    '300': '#b1bad0',
+                    '400': '#8696b6',
+                    '500': '#66789c',
+                    '600': '#506081',
+                    '700': '#414e69',
+                    '800': '#374358',
+                    '900': '#313a4b',
+                    '950': '#1e2330',
+                },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
