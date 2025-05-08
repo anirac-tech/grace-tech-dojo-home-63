@@ -12,17 +12,17 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, url, linkText = "View Project" }: ProjectCardProps) => {
   return (
-    <Card className="h-full flex flex-col transition-all hover:shadow-md border border-gray-200">
-      <CardHeader className="pb-2">
+    <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg border border-gray-100 overflow-hidden group">
+      <CardHeader className="pb-2 border-b border-gray-50 bg-white">
         <CardTitle className="text-xl font-serif text-dojo-800">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="flex-grow flex flex-col">
+      <CardContent className="flex-grow flex flex-col bg-white p-6">
         <p className="text-gray-600 mb-4 flex-grow">{description}</p>
         {url && (
-          <div className="mt-auto pt-2 border-t border-gray-100">
+          <div className="mt-auto pt-2">
             <Button 
               variant="link" 
-              className="p-0 h-auto text-dojo-700 hover:text-dojo-800 font-medium flex items-center gap-1.5 transition-colors"
+              className="p-0 h-auto text-dojo-700 hover:text-dojo-800 font-medium flex items-center gap-1.5 transition-colors group-hover:translate-x-0.5 duration-300"
               asChild
             >
               <a href={url} target="_blank" rel="noopener noreferrer">
