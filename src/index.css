@@ -102,5 +102,5 @@
 }
 
 .section-container {
-  @apply container mx-auto px-4 py-16 md:py-24;
+  @apply container mx-auto px-8 md:px-12 lg:px-24 py-16 md:py-24;
 }

@@ -32,7 +32,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section className="bg-gray-50" id="projects">
-      <div className="section-container">
+      <div className="container mx-auto px-8 md:px-12 lg:px-24 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 mb-6 text-center">
             Project Highlights

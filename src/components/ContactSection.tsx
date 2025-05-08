@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 const ContactSection = () => {
   return (
     <section className="bg-gray-50" id="contact">
-      <div className="py-16 container mx-auto px-4">
+      <div className="container mx-auto px-8 md:px-12 lg:px-24 py-16">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 mb-6">
             Contact Us

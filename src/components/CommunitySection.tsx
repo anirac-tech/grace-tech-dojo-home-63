@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CommunitySection = () => {
   return (
     <section className="bg-white" id="community">
-      <div className="section-container">
+      <div className="container mx-auto px-8 md:px-12 lg:px-24 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 mb-6">
             Join Our Community

@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <section className="pt-24 pb-16 md:pt-36 md:pb-28 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
           <h1 
             className={`text-3xl md:text-5xl font-serif font-semibold text-gray-900 mb-6 leading-tight tracking-tight transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
