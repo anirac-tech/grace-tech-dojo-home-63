@@ -1,5 +1,4 @@
 
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -13,13 +12,6 @@ const Hero = () => {
     
     return () => clearTimeout(timer);
   }, []);
-  
-  const handleScrollToProjects = () => {
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-gray-50 to-white">
@@ -35,12 +27,6 @@ const Hero = () => {
           >
             a community of faith-driven developers - serving and advancing skills; crafting tools with purpose
           </p>
-          <Button
-            onClick={handleScrollToProjects}
-            className="bg-dojo-700 hover:bg-dojo-800 text-white px-8 py-3 rounded-md text-lg transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]"
-          >
-            Explore Our Work
-          </Button>
         </div>
       </div>
     </section>

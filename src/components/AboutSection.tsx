@@ -1,7 +1,15 @@
 
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
+  const handleScrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="bg-white" id="about">
       <div className="section-container">
@@ -23,9 +31,17 @@ const AboutSection = () => {
               endure, with members of our community encouraging each other as we
               build.
             </p>
-            <p className="text-center font-medium">
+            <p className="text-center font-medium mb-10">
               If our mission resonates with you, reach out.
             </p>
+          </div>
+          <div className="text-center mt-8">
+            <Button
+              onClick={handleScrollToProjects}
+              className="bg-dojo-700 hover:bg-dojo-800 text-white px-8 py-3 rounded-md text-lg transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]"
+            >
+              Explore Our Work
+            </Button>
           </div>
         </div>
       </div>
