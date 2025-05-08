@@ -19,7 +19,7 @@ const ProjectCard = ({ title, description, url, linkText = "View Project" }: Pro
       <CardContent className="flex flex-col h-full">
         <p className="text-gray-600 mb-4 flex-grow">{description}</p>
         {url && (
-          <div className="mt-auto pt-2">
+          <div className="mt-auto pt-2 border-t border-gray-100">
             <Button 
               variant="link" 
               className="p-0 h-auto text-dojo-700 hover:text-dojo-800 font-medium flex items-center gap-1.5 transition-colors"
