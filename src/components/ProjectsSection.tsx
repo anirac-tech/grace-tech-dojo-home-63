@@ -33,13 +33,13 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <div className="h-full">
-        <div className="mb-6 text-center">
+        <div className="mb-6 text-center bg-gray-50 dark:bg-gray-800/80 rounded-t-lg py-4 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-300">
             Project Highlights
           </h2>
           <Separator className="w-24 h-0.5 bg-dojo-300 mx-auto mb-4" />
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 p-4">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
