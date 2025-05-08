@@ -12,13 +12,13 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <div className="bg-gray-50 dark:bg-gray-900 py-16 md:py-24 transition-colors duration-300">
+        <div className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300 py-16 md:py-24">
           <div className="container mx-auto px-8 md:px-12 lg:px-24">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="md:col-span-2 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-colors duration-300">
+              <div className="md:col-span-2">
                 <ProjectsSection />
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-colors duration-300">
+              <div className="">
                 <AboutSection />
               </div>
             </div>

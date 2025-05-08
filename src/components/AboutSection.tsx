@@ -4,14 +4,14 @@ import { Separator } from "@/components/ui/separator";
 const AboutSection = () => {
   return (
     <section id="about" className="h-full">
-      <div className="bg-white dark:bg-gray-800 transition-colors duration-300 h-full">
-        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-t-lg py-6 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center transition-colors duration-300">
+      <div className="h-full">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-300">
             About Us
           </h2>
           <Separator className="w-24 h-0.5 bg-dojo-300 mx-auto mb-4" />
         </div>
-        <div className="prose max-w-none text-gray-700 dark:text-gray-300 transition-colors duration-300 p-8">
+        <div className="prose max-w-none text-gray-700 dark:text-gray-300 transition-colors duration-300">
           <p className="mb-4 leading-relaxed text-center">
             GraceTechDojo is a faith-driven developer community committed to growth
             in both craft and character. We support one another in developing
