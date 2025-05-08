@@ -37,7 +37,7 @@ const ConnectSection = () => {
               Are you a developer looking for a supportive community that shares your values? Connect with others who are passionate about growing technically and spiritually.
             </p>
             <Button asChild className="bg-dojo-700 hover:bg-dojo-800 text-white px-8 py-3 rounded-md text-lg">
-              <Link to="/community">Connect With Us</Link>
+              <Link to="/community">Reach Out</Link>
             </Button>
           </div>
         </div>
