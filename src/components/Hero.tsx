@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
