@@ -11,14 +11,14 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="bg-white py-16 md:py-20" id="about">
+    <section className="bg-white dark:bg-gray-900 py-16 md:py-20 transition-colors duration-300" id="about">
       <div className="container mx-auto px-8 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 mb-5 text-center">
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-5 text-center transition-colors duration-300">
             About Us
           </h2>
           <Separator className="w-24 h-0.5 bg-dojo-300 mx-auto mb-8" />
-          <div className="prose prose-lg max-w-none text-gray-700">
+          <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300 transition-colors duration-300">
             <p className="mb-5 leading-relaxed text-center">
               GraceTechDojo is a faith-driven developer community committed to growth
               in both craft and character. We support one another in developing
