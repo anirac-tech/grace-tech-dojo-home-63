@@ -23,7 +23,12 @@ const Hero = () => {
             excellent software crafted with purpose
           </h1>
           <p 
-            className={`text-lg md:text-xl text-gray-600 mb-12 leading-relaxed tracking-wide transition-opacity duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-lg md:text-xl text-gray-600 mb-1 leading-relaxed tracking-wide transition-opacity duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            +
+          </p>
+          <p 
+            className={`text-lg md:text-xl text-gray-600 mb-12 leading-relaxed tracking-wide transition-opacity duration-700 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
             a community of faith-driven developers
           </p>
