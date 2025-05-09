@@ -6,7 +6,7 @@ import { MessageSquare, Users } from "lucide-react";
 const ConnectSection = () => {
   return (
     <section className="transition-colors duration-300 relative z-10" id="connect">
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-2 py-6">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block">
             Connect With Us
