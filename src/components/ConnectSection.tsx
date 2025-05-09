@@ -8,15 +8,15 @@ const ConnectSection = () => {
     <section className="transition-colors duration-300 relative z-10" id="connect">
       <div className="container mx-auto px-4 py-6">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block" style={{transform: "perspective(1000px) rotateX(0deg)"}}>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block">
             Connect With Us
             <span className="absolute -bottom-3 left-1/4 right-1/4 h-0.5 bg-dojo-300"></span>
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {/* Project Inquiries Column */}
-          <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 backdrop-blur-lg p-6 rounded-2xl border border-gray-700/30 shadow-2xl hover:shadow-dojo-300/10 transition-all duration-500 hover:translate-y-[-4px]">
+        <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+          {/* Project Inquiries Card */}
+          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu">
             <div className="flex items-center mb-4">
               <div className="bg-dojo-800/80 p-3 rounded-xl mr-4">
                 <MessageSquare className="h-5 w-5 text-dojo-300" />
@@ -33,8 +33,8 @@ const ConnectSection = () => {
             </Button>
           </div>
           
-          {/* Community Column */}
-          <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 backdrop-blur-lg p-6 rounded-2xl border border-gray-700/30 shadow-2xl hover:shadow-dojo-300/10 transition-all duration-500 hover:translate-y-[-4px]">
+          {/* Community Card */}
+          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu">
             <div className="flex items-center mb-4">
               <div className="bg-dojo-800/80 p-3 rounded-xl mr-4">
                 <Users className="h-5 w-5 text-dojo-300" />

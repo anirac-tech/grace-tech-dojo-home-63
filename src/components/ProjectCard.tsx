@@ -14,7 +14,7 @@ const ProjectCard = ({ title, description, url, linkText = "View Project" }: Pro
   return (
     <Card className="h-full transition-all duration-300 hover:shadow-xl hover:shadow-dojo-300/10 border border-gray-700/50 dark:border-gray-700 rounded-lg overflow-hidden group bg-gradient-to-b from-gray-800/80 to-gray-900/90 backdrop-blur-md">
       <CardHeader className="pb-2 border-b border-gray-700/40 bg-gradient-to-r from-dojo-900/50 to-dojo-800/30 transition-colors duration-300 group-hover:from-dojo-800/50 group-hover:to-dojo-700/30">
-        <CardTitle className="text-xl font-serif text-dojo-200 transition-colors duration-300 flex items-center justify-between">
+        <CardTitle className="text-2xl font-serif text-dojo-200 transition-colors duration-300 flex items-center justify-between group-hover:text-dojo-100">
           <span>{title}</span>
           <div className="h-1.5 w-1.5 rounded-full bg-dojo-300/70 group-hover:bg-dojo-300 transition-all duration-300"></div>
         </CardTitle>

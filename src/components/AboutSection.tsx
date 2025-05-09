@@ -6,7 +6,7 @@ const AboutSection = () => {
     <section id="about" className="h-full">
       <div className="h-full">
         <div className="mb-6">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block" style={{transform: "perspective(1000px) rotateX(0deg)"}}>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block">
             About Us
             <span className="absolute -bottom-3 left-0 right-0 h-0.5 bg-dojo-300"></span>
           </h2>
