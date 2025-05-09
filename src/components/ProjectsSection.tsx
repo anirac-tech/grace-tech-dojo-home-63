@@ -1,8 +1,5 @@
 
 import ProjectCard from "./ProjectCard";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -56,13 +53,7 @@ const ProjectsSection = () => {
         ))}
       </div>
       
-      <div className="mt-8 text-right">
-        <Button asChild variant="link" className="text-dojo-300 hover:text-dojo-200 font-medium flex items-center gap-1.5 transition-all duration-300 group text-sm">
-          <Link to="/projects">
-            View all <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-        </Button>
-      </div>
+      {/* View All link removed as requested */}
     </section>
   );
 };

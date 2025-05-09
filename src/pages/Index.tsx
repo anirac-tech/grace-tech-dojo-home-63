@@ -19,15 +19,15 @@ const Index = () => {
           <div className="container mx-auto px-6 md:px-8 lg:px-12 pb-20">
             <div className="relative z-10 grid grid-cols-12 gap-8">
               {/* Project section - on the left */}
-              <div className="col-span-12 lg:col-span-3 lg:col-start-1 pt-10 md:pt-20">
+              <div className="col-span-12 lg:col-span-2.7 lg:col-start-1 pt-10 md:pt-20">
                 <div className="absolute -left-[10%] top-[20%] w-[200px] h-[200px] rounded-full bg-dojo-300/5 blur-3xl z-0" />
-                <div className="relative z-10">
+                <div className="relative z-10 mx-auto w-[90%]">
                   <ProjectsSection />
                 </div>
               </div>
               
-              {/* Hero in the middle - 10% smaller */}
-              <div className="col-span-12 lg:col-span-6">
+              {/* Hero in the middle - 80% of current size */}
+              <div className="col-span-12 lg:col-span-4.8 mx-auto w-[80%]">
                 <Hero />
                 
                 {/* Connect section between Projects and About */}
@@ -38,8 +38,8 @@ const Index = () => {
               </div>
               
               {/* About section - on the right */}
-              <div className="col-span-12 lg:col-span-3 lg:col-start-10 pt-10 md:pt-20">
-                <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 p-8 rounded-2xl shadow-xl">
+              <div className="col-span-12 lg:col-span-2.7 lg:col-start-10 pt-10 md:pt-20">
+                <div className="mx-auto w-[90%] bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 p-8 rounded-2xl shadow-xl">
                   <AboutSection />
                 </div>
               </div>
