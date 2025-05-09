@@ -20,16 +20,16 @@ const ProjectCard = ({ title, description, url, linkText = "View Project" }: Pro
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow flex flex-col p-3 transition-colors duration-300">
-        <p className="text-gray-300 mb-2 text-xs leading-relaxed flex-grow transition-colors duration-300">{description}</p>
+        <p className="text-lg text-gray-300 mb-2 leading-relaxed flex-grow transition-colors duration-300">{description}</p>
         {url && (
           <div className="mt-auto pt-1">
             <Button 
               variant="link" 
-              className="p-0 h-auto text-dojo-300 hover:text-dojo-200 font-medium flex items-center gap-1 transition-colors text-xs group-hover:translate-x-1 duration-300"
+              className="p-0 h-auto text-dojo-300 hover:text-dojo-200 font-medium flex items-center gap-1 transition-colors text-sm group-hover:translate-x-1 duration-300"
               asChild
             >
               <a href={url} target="_blank" rel="noopener noreferrer">
-                {linkText} <ExternalLink size={10} />
+                {linkText} <ExternalLink size={12} />
               </a>
             </Button>
           </div>

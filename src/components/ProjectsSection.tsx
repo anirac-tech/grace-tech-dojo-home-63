@@ -1,5 +1,4 @@
 
-import { Separator } from "@/components/ui/separator";
 import ProjectCard from "./ProjectCard";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,9 +35,9 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <div className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-serif font-semibold text-white mb-4 relative inline-block">
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block" style={{transform: "perspective(1000px) rotateX(0deg)"}}>
           Project Highlights
-          <span className="absolute -bottom-2 left-0 w-2/3 h-0.5 bg-dojo-300"></span>
+          <span className="absolute -bottom-3 left-0 right-0 h-0.5 bg-dojo-300"></span>
         </h2>
       </div>
       <div className="space-y-6">

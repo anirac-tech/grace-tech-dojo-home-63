@@ -8,7 +8,7 @@ const ConnectSection = () => {
     <section className="transition-colors duration-300 relative z-10" id="connect">
       <div className="container mx-auto px-8 md:px-12 lg:px-24 py-16 md:py-24">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-6 relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-6 relative inline-block" style={{transform: "perspective(1000px) rotateX(0deg)"}}>
             Connect With Us
             <span className="absolute -bottom-3 left-1/4 right-1/4 h-0.5 bg-dojo-300"></span>
           </h2>
