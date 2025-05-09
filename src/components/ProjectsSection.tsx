@@ -37,10 +37,10 @@ const ProjectsSection = () => {
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-300">
             Project Highlights
           </h2>
-          <Separator className="w-24 h-0.5 bg-dojo-300 mx-auto mb-4" />
+          <Separator className="w-24 h-0.5 bg-dojo-300 mx-auto mb-10" />
         </div>
         <div className="space-y-6">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <ProjectCard
               key={project.title}
               title={project.title}

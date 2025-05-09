@@ -12,9 +12,9 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <div className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300 py-16 md:py-24">
+        <div className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300 py-20 md:py-28">
           <div className="container mx-auto px-8 md:px-12 lg:px-24">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
               <div className="md:col-span-2">
                 <ProjectsSection />
               </div>

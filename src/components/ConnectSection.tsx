@@ -6,7 +6,7 @@ import { MessageSquare, Users } from "lucide-react";
 
 const ConnectSection = () => {
   return (
-    <section className="transition-colors duration-300" id="connect">
+    <section className="transition-colors duration-300 pt-8 md:pt-12" id="connect">
       <div className="container mx-auto px-8 md:px-12 lg:px-24 py-16 md:py-24">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-300">
@@ -17,7 +17,7 @@ const ConnectSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Project Inquiries Column */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 transform hover:translate-y-[-2px]">
             <div className="flex items-center mb-6">
               <div className="bg-dojo-50 dark:bg-dojo-900/30 p-3 rounded-full mr-4">
                 <MessageSquare className="h-6 w-6 text-dojo-600 dark:text-dojo-300" />
@@ -35,7 +35,7 @@ const ConnectSection = () => {
           </div>
           
           {/* Community Column */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 transform hover:translate-y-[-2px]">
             <div className="flex items-center mb-6">
               <div className="bg-dojo-50 dark:bg-dojo-900/30 p-3 rounded-full mr-4">
                 <Users className="h-6 w-6 text-dojo-600 dark:text-dojo-300" />

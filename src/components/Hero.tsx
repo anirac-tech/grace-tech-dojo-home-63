@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container mx-auto px-8 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
           <h1 
-            className={`text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6 leading-tight tracking-tight transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8 leading-tight tracking-tight transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
             excellent software crafted with purpose
           </h1>
@@ -28,10 +28,12 @@ const Hero = () => {
             +
           </p>
           <p 
-            className={`text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 leading-relaxed tracking-wide transition-opacity duration-700 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed tracking-wide transition-opacity duration-700 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
             a community of faith-driven developers
           </p>
+          
+          <div className={`w-20 h-0.5 bg-dojo-300 mx-auto transition-opacity duration-700 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>
       </div>
     </section>
