@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from "react";
-import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -14,13 +13,6 @@ const Hero = () => {
     
     return () => clearTimeout(timer);
   }, []);
-
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
@@ -46,16 +38,6 @@ const Hero = () => {
           >
             a community of faith-driven developers
           </p>
-          
-          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Button 
-              onClick={scrollToProjects} 
-              className="mt-8 bg-dojo-300 hover:bg-dojo-200 text-dojo-900 hover:text-dojo-950 text-lg px-8 py-6 h-auto rounded-full transition-all duration-300 hover:translate-y-[-2px] group"
-            >
-              View our work
-              <ArrowDown className="ml-2 transition-transform group-hover:translate-y-1" />
-            </Button>
-          </div>
         </div>
       </div>
       
