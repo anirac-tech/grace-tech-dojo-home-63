@@ -22,10 +22,10 @@ const Hero = () => {
       {/* Large decorative circle */}
       <div className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-dojo-300/10 backdrop-blur-3xl bg-dojo-300/5 z-0" />
       
-      <div className="relative z-10 mx-auto">
+      <div className="relative z-10 w-full">
         <div>
           <h1 
-            className={`text-5xl sm:text-6xl md:text-7xl font-serif font-semibold text-white mb-8 leading-tight tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-white mb-8 leading-tight tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             <span className="text-dojo-300">excellent</span> software crafted with purpose
           </h1>
@@ -33,7 +33,7 @@ const Hero = () => {
             className={`w-1/3 h-0.5 bg-dojo-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 w-1/3' : 'opacity-0 w-0'}`}
           />
           <p 
-            className={`text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`text-lg md:text-xl text-gray-300 mb-6 leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             a community of faith-driven developers
           </p>

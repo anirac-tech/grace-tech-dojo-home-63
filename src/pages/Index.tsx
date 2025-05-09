@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white pl-[25px]">
       <Navbar />
       <main>
         <div className="relative">
@@ -16,7 +16,7 @@ const Index = () => {
           <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-gray-900 to-transparent" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOEg0djQ0aDJ2LTQyaDEyYzguMjg0IDAgMTUgNi43MTYgMTUgMTV2MTVoM3YyNmg0MFYyMEgzNnYtMnpNMzEgOFY0aC03djRoN000IDBIMUMuNDQ4IDAgMCAuNDQ4IDAgMXY1OGMwIC41NTIuNDQ4IDEgMSAxaDU4Yy41NTIgMCAxLS40NDggMS0xVjIwYzAtLjU1Mi0uNDQ4LTEtMS0xSDQwdi0zYzAtLjU1Mi0uNDQ4LTEtMS0xaC0ydi0xYzAtOC45NDQtNy4wNTYtMTYtMTYtMTZINHYyem0yOSAxOEgzLjk5MlYzSDIxYzkuMzk0IDAgMTcgNy42MDYgMTcgMTd2NmgtNXYyeiIgZmlsbD0iIzI5MzQzZTQwIi8+PC9nPjwvc3ZnPg==')] opacity-5" />
           
-          <div className="container mx-auto px-4 pb-20 pl-[40px]">
+          <div className="container mx-auto px-4 pb-20">
             <div className="relative z-10 grid grid-cols-10 gap-0">
               {/* Project section - on the left */}
               <div className="col-span-12 lg:col-span-2 lg:col-start-1 pt-10 md:pt-20">
@@ -28,7 +28,7 @@ const Index = () => {
               
               {/* Hero in the middle */}
               <div className="col-span-12 lg:col-span-5 lg:col-start-3 lg:flex lg:justify-center pt-10">
-                <div className="w-[90%] mx-auto">
+                <div className="w-[calc(90%-30px)] mx-auto">
                   <Hero />
                   
                   {/* Connect section between Projects and About */}
