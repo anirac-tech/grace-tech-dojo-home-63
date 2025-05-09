@@ -22,7 +22,7 @@ const Hero = () => {
       {/* Large decorative circle */}
       <div className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-dojo-300/10 backdrop-blur-3xl bg-dojo-300/5 z-0" />
       
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-[calc(100%-30px)]">
         <div>
           <h1 
             className={`text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-white mb-8 leading-tight tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
