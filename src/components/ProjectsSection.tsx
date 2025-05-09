@@ -35,17 +35,17 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects">
-      <div className="mb-16">
-        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-6 relative inline-block">
+      <div className="mb-8">
+        <h2 className="text-2xl md:text-3xl font-serif font-semibold text-white mb-4 relative inline-block">
           Project Highlights
-          <span className="absolute -bottom-3 left-0 w-2/3 h-0.5 bg-dojo-300"></span>
+          <span className="absolute -bottom-2 left-0 w-2/3 h-0.5 bg-dojo-300"></span>
         </h2>
       </div>
-      <div className="space-y-8">
+      <div className="space-y-6">
         {projects.map((project, index) => (
           <div 
             key={project.title}
-            className={`transform transition-all duration-500 hover:translate-x-2`}
+            className={`transform transition-all duration-500 hover:translate-x-1`}
           >
             <ProjectCard
               title={project.title}
@@ -57,10 +57,10 @@ const ProjectsSection = () => {
         ))}
       </div>
       
-      <div className="mt-12 text-right">
-        <Button asChild variant="link" className="text-dojo-300 hover:text-dojo-200 font-medium flex items-center gap-1.5 transition-all duration-300 group">
+      <div className="mt-8 text-right">
+        <Button asChild variant="link" className="text-dojo-300 hover:text-dojo-200 font-medium flex items-center gap-1.5 transition-all duration-300 group text-sm">
           <Link to="/projects">
-            View all projects <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            View all <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </Button>
       </div>
