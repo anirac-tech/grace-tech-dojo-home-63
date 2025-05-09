@@ -14,13 +14,12 @@ const Index = () => {
         <div className="relative">
           {/* Background decorative elements */}
           <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-gray-900 to-transparent" />
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOEg0djQ0aDJWNGgxMmM4LjI4NCAwIDE1IDYuNzE2IDE1IDE1djE1aDN2MjZoNDBWMjBIMzZ2LTJ6TTMxIDhWNGgtN3Y0aDdNNCAwSDFDLjQ0OCAwIDAgLjQ0OCAwIDF2NThjMCAuNTUyLjQ0OCAxIDEgMWg1OGMuNTUyIDAgMS0uNDQ4IDEtMVYyMGMwLS41NTItLjQ0OC0xLTEtMUg0MHYtM2MwLS41NTItLjQ0OC0xLTEtMWgtMnYtMWMwLTguOTQ0LTcuMDU2LTE2LTE2LTE2SDR2MnptMjkgMThIMy45OTJWM0gyMWM5LjM5NCAwIDE3IDcuNjA2IDE3IDE3djZoLTV2MnoiIGZpbGw9IiMyOTM0M2U0MCIvPjwvZz48L3N2Zz4=')] opacity-5" />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOEg0djQ0aDJ2LTQyaDEyYzguMjg0IDAgMTUgNi43MTYgMTUgMTV2MTVoM3YyNmg0MFYyMEgzNnYtMnpNMzEgOFY0aC03djRoN000IDBIMUMuNDQ4IDAgMCAuNDQ4IDAgMXY1OGMwIC41NTIuNDQ4IDEgMSAxaDU4Yy41NTIgMCAxLS40NDggMS0xVjIwYzAtLjU1Mi0uNDQ4LTEtMS0xSDQwdi0zYzAtLjU1Mi0uNDQ4LTEtMS0xaC0ydi0xYzAtOC45NDQtNy4wNTYtMTYtMTYtMTZINHYyem0yOSAxOEgzLjk5MlYzSDIxYzkuMzk0IDAgMTcgNy42MDYgMTcgMTd2NmgtNXYyeiIgZmlsbD0iIzI5MzQzZTQwIi8+PC9nPjwvc3ZnPg==')] opacity-5" />
           
-          <div className="container mx-auto px-4 md:px-8 lg:px-12">
-            {/* Layout with Projects on left, Hero in middle, About on right */}
-            <div className="relative z-10 flex flex-col md:flex-row justify-between">
+          <div className="container mx-auto px-6 md:px-8 lg:px-12 pb-20">
+            <div className="relative z-10 grid grid-cols-12 gap-8">
               {/* Project section - on the left */}
-              <div className="md:w-[30%] pt-10 md:pt-20">
+              <div className="col-span-12 lg:col-span-3 lg:col-start-2 pt-10 md:pt-20">
                 <div className="absolute -left-[10%] top-[20%] w-[200px] h-[200px] rounded-full bg-dojo-300/5 blur-3xl z-0" />
                 <div className="relative z-10">
                   <ProjectsSection />
@@ -28,12 +27,12 @@ const Index = () => {
               </div>
               
               {/* Hero in the middle */}
-              <div className="md:w-[40%]">
+              <div className="col-span-12 lg:col-span-4 lg:col-start-5">
                 <Hero />
               </div>
               
               {/* About section - on the right */}
-              <div className="md:w-[20%] pt-10 md:pt-20">
+              <div className="col-span-12 lg:col-span-3 lg:col-start-9 pt-10 md:pt-20">
                 <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 p-8 rounded-2xl shadow-xl">
                   <AboutSection />
                 </div>
@@ -41,8 +40,8 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Connect section with full bleed design */}
-          <div className="relative bg-dojo-900/80 backdrop-blur-md py-24">
+          {/* Connect section between Projects and About */}
+          <div className="relative bg-dojo-900/80 backdrop-blur-md py-16">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,120,180,0.1)_0,rgba(100,120,180,0)_60%)]" />
             <ConnectSection />
           </div>

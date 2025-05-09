@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-10">
           <p className="text-sm font-medium tracking-wider text-gray-400 uppercase transition-colors duration-300 mb-2">
-            EXCELLENT SOFTWARE · A DEVELOPER COMMUNITY FOR SKILL, CLARITY, AND PURPOSE.
+            EXCELLENT SOFTWARE CRAFTED WITH PURPOSE · A COMMUNITY OF FAITH-DRIVEN DEVELOPERS
           </p>
           <div className="w-24 h-0.5 bg-dojo-300/50 mx-auto my-8" />
         </div>
