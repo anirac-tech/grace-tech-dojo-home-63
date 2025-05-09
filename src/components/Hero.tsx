@@ -1,5 +1,7 @@
 
 import { useEffect, useState } from "react";
+import { ArrowDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,29 +15,52 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
-      <div className="container mx-auto px-8 md:px-12 lg:px-24">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-dojo-950 via-dojo-900 to-dojo-800 z-0" />
+      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,rgba(255,255,255,0)_70%)]" />
+      
+      {/* Large decorative circle */}
+      <div className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-dojo-300/10 backdrop-blur-3xl bg-dojo-300/5 z-0" />
+      
+      <div className="container mx-auto px-8 md:px-12 lg:px-24 relative z-10">
+        <div className="max-w-5xl">
           <h1 
-            className={`text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8 leading-tight tracking-tight transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-serif font-semibold text-white mb-12 leading-tight tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
-            excellent software crafted with purpose
+            <span className="text-dojo-300">excellent</span> software crafted with purpose
           </h1>
+          <div 
+            className={`w-1/3 h-0.5 bg-dojo-300 mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 w-1/3' : 'opacity-0 w-0'}`}
+          />
           <p 
-            className={`text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-5 leading-relaxed tracking-wide transition-opacity duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-          >
-            +
-          </p>
-          <p 
-            className={`text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed tracking-wide transition-opacity duration-700 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             a community of faith-driven developers
           </p>
           
-          <div className={`w-20 h-0.5 bg-dojo-300 mx-auto transition-opacity duration-700 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
+          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Button 
+              onClick={scrollToProjects} 
+              className="mt-8 bg-dojo-300 hover:bg-dojo-200 text-dojo-900 hover:text-dojo-950 text-lg px-8 py-6 h-auto rounded-full transition-all duration-300 hover:translate-y-[-2px] group"
+            >
+              View our work
+              <ArrowDown className="ml-2 transition-transform group-hover:translate-y-1" />
+            </Button>
+          </div>
         </div>
       </div>
+      
+      {/* Bottom decorative element */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent z-0" />
     </section>
   );
 };
