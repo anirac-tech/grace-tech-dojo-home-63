@@ -18,8 +18,8 @@ const Index = () => {
           
           <div className="container mx-auto px-6 md:px-8 lg:px-12 pb-20">
             <div className="relative z-10 grid grid-cols-12 gap-8">
-              {/* Project section - on the left */}
-              <div className="col-span-12 lg:col-span-2.7 lg:col-start-1 pt-10 md:pt-20">
+              {/* Project section - on the left - 90% of current size and closer to center */}
+              <div className="col-span-12 lg:col-span-3 lg:col-start-2 pt-10 md:pt-20">
                 <div className="absolute -left-[10%] top-[20%] w-[200px] h-[200px] rounded-full bg-dojo-300/5 blur-3xl z-0" />
                 <div className="relative z-10 mx-auto w-[90%]">
                   <ProjectsSection />
@@ -27,18 +27,20 @@ const Index = () => {
               </div>
               
               {/* Hero in the middle - 80% of current size */}
-              <div className="col-span-12 lg:col-span-4.8 mx-auto w-[80%]">
-                <Hero />
-                
-                {/* Connect section between Projects and About */}
-                <div className="relative mt-6 bg-dojo-900/90 backdrop-blur-xl py-8 px-6 rounded-2xl border-2 border-gray-700/40 shadow-xl">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,120,180,0.15)_0,rgba(100,120,180,0)_70%)]" />
-                  <ConnectSection />
+              <div className="col-span-12 lg:col-span-6 lg:flex lg:justify-center pt-10">
+                <div className="w-[80%]">
+                  <Hero />
+                  
+                  {/* Connect section between Projects and About */}
+                  <div className="relative mt-6 bg-dojo-900/90 backdrop-blur-xl py-8 px-6 rounded-2xl border-2 border-gray-700/40 shadow-xl">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,120,180,0.15)_0,rgba(100,120,180,0)_70%)]" />
+                    <ConnectSection />
+                  </div>
                 </div>
               </div>
               
-              {/* About section - on the right */}
-              <div className="col-span-12 lg:col-span-2.7 lg:col-start-10 pt-10 md:pt-20">
+              {/* About section - on the right - 90% of current size and closer to center */}
+              <div className="col-span-12 lg:col-span-3 lg:col-end-11 pt-10 md:pt-20">
                 <div className="mx-auto w-[90%] bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 p-8 rounded-2xl shadow-xl">
                   <AboutSection />
                 </div>
