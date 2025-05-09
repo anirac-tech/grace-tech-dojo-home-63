@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white pl-[75px]">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white pl-[-75px]">
       <Navbar />
       <main>
         <div className="relative">
