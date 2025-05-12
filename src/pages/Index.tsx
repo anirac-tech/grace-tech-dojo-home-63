@@ -5,7 +5,6 @@ import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ConnectSection from "@/components/ConnectSection";
 import Footer from "@/components/Footer";
-
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white">
       {/* Skip to content link for accessibility */}
@@ -41,8 +40,11 @@ const Index = () => {
                 <div className="w-full mx-auto perspective-[1000px]">
                   <Hero />
                   
-                  {/* Connect section - now directly using the ConnectSection component */}
-                  <ConnectSection />
+                  {/* Connect section between Projects and About */}
+                  <div className="relative mt-6 w-full mx-auto bg-dojo-900/90 backdrop-blur-xl py-8 px-6 rounded-2xl border-2 border-gray-700/40 shadow-xl transform transition-all duration-500 hover:shadow-dojo-300/10 hover:translate-y-[-5px]">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,120,180,0.15)_0,rgba(100,120,180,0)_70%)]" aria-hidden="true" />
+                    <ConnectSection />
+                  </div>
                 </div>
               </div>
               
@@ -61,5 +63,4 @@ const Index = () => {
       <Footer />
     </div>;
 };
-
 export default Index;
