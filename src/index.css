@@ -7,47 +7,6 @@
 
 @layer base {
   :root {
-    --background: 220 14% 88%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 95%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 95%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 90%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 92%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 90%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 85%;
-    --input: 214.3 31.8% 85%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 92%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 92%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 85%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
     --background: 224 25% 16%;
     --foreground: 210 40% 98%;
 
@@ -84,6 +43,8 @@
     --sidebar-accent-foreground: 240 4.8% 92%;
     --sidebar-border: 240 3.7% 20%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --radius: 0.5rem;
   }
 }
 
@@ -94,20 +55,15 @@ html {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border selection:bg-dojo-300/20 selection:text-white;
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground antialiased;
   }
 
   html {
     scroll-behavior: smooth;
-  }
-
-  /* Apply dark mode by default */
-  html {
-    @apply dark;
   }
 }
 
@@ -115,16 +71,33 @@ html {
   @apply container mx-auto px-8 md:px-12 lg:px-24 py-16 md:py-24;
 }
 
-/* Add a smoother transition for theme changes */
-.transition-theme {
-  @apply transition-colors duration-300;
-}
-
-/* Update hero section for dark mode */
-.hero-gradient-dark {
+/* Update hero section */
+.hero-gradient {
   @apply bg-gradient-to-b from-gray-900 to-gray-800;
 }
 
-.hero-gradient-light {
-  @apply bg-gradient-to-b from-gray-200 to-gray-100;
+/* Add focus visible styling for better accessibility */
+@layer utilities {
+  .focus-outline {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dojo-300 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900;
+  }
+  
+  /* Improved Skip-to-content styling */
+  .skip-link {
+    @apply absolute left-4 top-4 z-50 bg-dojo-300 text-gray-900 px-4 py-2 rounded transform -translate-y-16 focus:translate-y-0 transition-transform;
+  }
+}
+
+/* Add smooth animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
