@@ -1,9 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare, Users } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 const ConnectSection = () => {
   return <section className="transition-colors duration-300 relative z-10 mt-0" id="connect">
       <div className="container mx-auto px-2 py-0">
@@ -56,5 +54,4 @@ const ConnectSection = () => {
       </div>
     </section>;
 };
-
 export default ConnectSection;
