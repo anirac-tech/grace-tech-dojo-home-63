@@ -40,18 +40,15 @@ const Index = () => {
                 <div className="w-full mx-auto perspective-[1000px]">
                   <Hero />
                   
-                  {/* Connect section between Projects and About */}
-                  <div className="relative mt-6 w-full mx-auto bg-dojo-900/90 backdrop-blur-xl py-8 px-6 rounded-2xl border-2 border-gray-700/40 shadow-xl transform transition-all duration-500 hover:shadow-dojo-300/10 hover:translate-y-[-5px]">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,120,180,0.15)_0,rgba(100,120,180,0)_70%)]" aria-hidden="true" />
-                    <ConnectSection />
-                  </div>
+                  {/* Connect section */}
+                  <ConnectSection />
                 </div>
               </div>
               
               {/* About section - on the right */}
               <div className="col-span-12 lg:col-span-3 pt-10 md:pt-20">
                 <div className="absolute -right-[5%] top-[40%] w-[150px] h-[150px] rounded-full bg-dojo-500/5 blur-2xl z-0" aria-hidden="true" />
-                <div className="mx-auto w-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 p-8 rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-[1.02]">
+                <div className="mx-auto w-[90%] bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 p-8 rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-[1.02]">
                   <AboutSection />
                 </div>
               </div>

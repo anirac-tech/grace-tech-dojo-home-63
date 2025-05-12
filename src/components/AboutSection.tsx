@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 const AboutSection = () => {
   return (
     <section id="about" className="h-full">
-      <div className="h-full">
+      <div className="h-full max-w-[90%] mx-auto">
         <div className="mb-6">
           <h2 className="heading-reveal heading-underline-left text-white mb-4">
             About Us
