@@ -1,12 +1,15 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -23,6 +26,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const navLinks = [{
     name: "Home",
     path: "/"
@@ -38,6 +42,7 @@ const Navbar = () => {
   }
   // Space for future Blog link
   ];
+
   return <header className={cn("fixed w-full top-0 left-0 z-50 transition-all duration-500", isScrolled ? "backdrop-blur-xl bg-gray-900/90 shadow-lg shadow-black/10 py-3" : "bg-transparent py-5")}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -53,7 +58,7 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map(link => <Link key={link.name} to={link.path} className={cn("text-gray-300 hover:text-dojo-300 text-sm font-medium transition-colors duration-300 relative py-2", activeLink === link.path && "text-dojo-300")}>
                 {link.name}
-                {activeLink === link.path && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-dojo-300 transform origin-left animate-[expandWidth_0.3s_ease-out]"></span>}
+                {activeLink === link.path && <span className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-dojo-300 transform origin-left"></span>}
               </Link>)}
             <Button asChild variant="outline" className="ml-4 border-dojo-500 text-dojo-300 hover:bg-dojo-900/50 hover:border-dojo-400 group relative overflow-hidden">
               <Link to="/contact">
@@ -89,4 +94,5 @@ const Navbar = () => {
       </div>
     </header>;
 };
+
 export default Navbar;

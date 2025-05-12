@@ -1,11 +1,13 @@
 
 import { useEffect, useState } from "react";
+
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
   });
+
   useEffect(() => {
     // Trigger fade-in animation after component mounts
     const timer = setTimeout(() => {
@@ -30,6 +32,7 @@ const Hero = () => {
   const dynamicTransform = {
     transform: `perspective(1000px) rotateX(${mousePosition.y * 2}deg) rotateY(${mousePosition.x * -2}deg)`
   };
+
   return <section className="flex items-center pt-20 pb-12 overflow-hidden" aria-labelledby="hero-heading">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-tr from-dojo-950 via-dojo-900 to-dojo-800 z-0" aria-hidden="true" />
@@ -48,7 +51,7 @@ const Hero = () => {
         <div style={dynamicTransform} className="transition-transform duration-200 ease-out max-w-3xl mx-auto text-center">
           <h1 id="hero-heading" className={`text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-white mb-8 leading-tight tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <span className="text-dojo-300 relative inline-block">
-              excellent
+              GraceTech Dojo
               <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-dojo-300/30 transform scale-x-100 origin-left transition-transform"></span>
             </span> software crafted with purpose
           </h1>
@@ -65,4 +68,5 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent z-0" aria-hidden="true" />
     </section>;
 };
+
 export default Hero;
