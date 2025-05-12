@@ -56,10 +56,21 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map(link => <Link key={link.name} to={link.path} className={cn("text-gray-300 hover:text-dojo-300 text-sm font-medium transition-colors duration-300 relative py-2", activeLink === link.path && "text-dojo-300")}>
-                {activeLink === link.path && <span className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-dojo-300 mx-auto -z-10"></span>}
-                {link.name}
-              </Link>)}
+            {navLinks.map(link => (
+              <Link 
+                key={link.name} 
+                to={link.path} 
+                className={cn(
+                  "text-gray-300 hover:text-dojo-300 text-sm font-medium transition-colors duration-300 relative py-2", 
+                  activeLink === link.path && "text-dojo-300"
+                )}
+              >
+                <span className="relative z-10">{link.name}</span>
+                {activeLink === link.path && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-dojo-300 -z-10"></span>
+                )}
+              </Link>
+            ))}
             <Button asChild variant="outline" className="ml-4 border-dojo-500 text-dojo-300 hover:bg-dojo-900/50 hover:border-dojo-400 group relative overflow-hidden">
               <Link to="/contact">
                 <span className="absolute inset-0 w-0 bg-dojo-300/20 group-hover:w-full transition-all duration-300 ease-out"></span>
