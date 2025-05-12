@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,9 +33,9 @@ const Hero = () => {
   return <section className="flex items-center pt-20 pb-12 overflow-hidden" aria-labelledby="hero-heading">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-tr from-dojo-950 via-dojo-900 to-dojo-800 z-0" aria-hidden="true" />
-      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,rgba(255,255,255,0)_70%)]" aria-hidden="true" />
+      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,rgba(255,255,255,0)_70%)] z-0" aria-hidden="true" />
       
-      {/* 3D effect decorative elements - moved below header with lower z-index */}
+      {/* 3D effect decorative elements positioned behind */}
       <div className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-dojo-300/10 backdrop-blur-3xl bg-dojo-300/5 -z-10 transition-transform duration-200 ease-out" style={{
       transform: `translate(${mousePosition.x * 10}px, ${mousePosition.y * 10}px)`
     }} aria-hidden="true" />

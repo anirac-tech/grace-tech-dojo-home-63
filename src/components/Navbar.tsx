@@ -43,12 +43,25 @@ const Navbar = () => {
   // Space for future Blog link
   ];
 
-  return <header className="relative z-20">
+  return (
+    <header className="relative z-30">
+      <div 
+        className="absolute inset-0 -z-20 bg-gradient-to-b from-gray-900 via-gray-900 to-transparent opacity-90"
+        aria-hidden="true"
+      />
+      
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <span className="text-xl md:text-2xl font-serif font-semibold text-white px-0">
+        <div className="flex items-center justify-between py-4">
+          <div className="flex items-center gap-2">
+            <Link to="/" className="flex items-center group">
+              <div className="w-10 h-10 relative mr-2">
+                <img 
+                  src="/lovable-uploads/5ae5dc36-a8fa-4fed-a410-6ccbfd33ef8b.png" 
+                  alt="GraceTechDojo Logo" 
+                  className="w-full h-full object-contain transition-all duration-300 group-hover:scale-105"
+                />
+              </div>
+              <span className="text-xl md:text-2xl font-serif font-semibold text-white relative z-10">
                 GraceTechDojo
               </span>
             </Link>
@@ -88,7 +101,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={cn("md:hidden absolute left-0 right-0 bg-gray-900/95 backdrop-blur-xl shadow-xl transition-all duration-300 overflow-hidden border-t border-gray-800", mobileMenuOpen ? "max-h-80" : "max-h-0")} aria-hidden={!mobileMenuOpen}>
+        <div className={cn("md:hidden absolute left-0 right-0 bg-gray-900/95 backdrop-blur-xl shadow-xl transition-all duration-300 overflow-hidden border-t border-gray-800 z-20", mobileMenuOpen ? "max-h-80" : "max-h-0")} aria-hidden={!mobileMenuOpen}>
           <div className="px-4 py-2">
             {navLinks.map(link => <Link key={link.name} to={link.path} className={cn("block py-3 border-b border-gray-800 transition-all duration-300", activeLink === link.path ? "text-dojo-300 border-dojo-300/30" : "text-gray-300 hover:text-dojo-300")} onClick={() => setMobileMenuOpen(false)}>
                 {link.name}
@@ -103,7 +116,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
 
 export default Navbar;
