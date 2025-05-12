@@ -45,15 +45,15 @@ const Hero = () => {
     }} aria-hidden="true" />
       
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
-        <div style={dynamicTransform} className="transition-transform duration-200 ease-out max-w-3xl mx-auto">
+        <div style={dynamicTransform} className="transition-transform duration-200 ease-out max-w-3xl mx-auto text-center">
           <h1 id="hero-heading" className={`text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-white mb-8 leading-tight tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <span className="text-dojo-300 relative inline-block">
-              GraceTech Dojo
+              excellent
               <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-dojo-300/30 transform scale-x-100 origin-left transition-transform"></span>
             </span> software crafted with purpose
           </h1>
           
-          <div className={`w-1/3 h-0.5 bg-dojo-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 w-1/3' : 'opacity-0 w-0'}`} aria-hidden="true" />
+          <div className={`w-1/3 h-0.5 bg-dojo-300 mb-8 transition-all duration-1000 delay-300 mx-auto ${isVisible ? 'opacity-100 w-1/3' : 'opacity-0 w-0'}`} aria-hidden="true" />
           
           <p className={`text-lg md:text-xl text-gray-300 mb-2 leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             a community of faith-driven developers
