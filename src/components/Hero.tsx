@@ -1,13 +1,10 @@
-
 import { useEffect, useState } from "react";
-
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
   });
-
   useEffect(() => {
     // Trigger fade-in animation after component mounts
     const timer = setTimeout(() => {
@@ -32,7 +29,6 @@ const Hero = () => {
   const dynamicTransform = {
     transform: `perspective(1000px) rotateX(${mousePosition.y * 2}deg) rotateY(${mousePosition.x * -2}deg)`
   };
-
   return <section className="flex items-center pt-20 pb-12 overflow-hidden" aria-labelledby="hero-heading">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-tr from-dojo-950 via-dojo-900 to-dojo-800 z-0" aria-hidden="true" />
@@ -70,5 +66,4 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent z-0" aria-hidden="true" />
     </section>;
 };
-
 export default Hero;
