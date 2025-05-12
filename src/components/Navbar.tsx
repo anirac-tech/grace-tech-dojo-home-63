@@ -1,15 +1,12 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -26,7 +23,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   const navLinks = [{
     name: "Home",
     path: "/"
@@ -42,8 +38,7 @@ const Navbar = () => {
   }
   // Space for future Blog link
   ];
-
-  return <header className={cn("fixed w-full top-0 left-0 z-50 transition-all duration-500", isScrolled ? "backdrop-blur-xl bg-gray-900/90 shadow-lg shadow-black/10 py-3" : "bg-transparent py-5")}>
+  return <header className="">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -94,5 +89,4 @@ const Navbar = () => {
       </div>
     </header>;
 };
-
 export default Navbar;
