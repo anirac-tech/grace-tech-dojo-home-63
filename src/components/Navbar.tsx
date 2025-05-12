@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,10 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    
+    // Set active link based on current path
+    setActiveLink(window.location.pathname);
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -58,17 +64,26 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-gray-300 hover:text-dojo-300 text-sm font-medium transition-colors duration-300"
+                className={cn(
+                  "text-gray-300 hover:text-dojo-300 text-sm font-medium transition-colors duration-300 relative py-2",
+                  activeLink === link.path && "text-dojo-300"
+                )}
               >
                 {link.name}
+                {activeLink === link.path && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-dojo-300 transform origin-left animate-[expandWidth_0.3s_ease-out]"></span>
+                )}
               </Link>
             ))}
             <Button
               asChild
               variant="outline"
-              className="ml-4 border-dojo-500 text-dojo-300 hover:bg-dojo-900/50 hover:border-dojo-400"
+              className="ml-4 border-dojo-500 text-dojo-300 hover:bg-dojo-900/50 hover:border-dojo-400 group relative overflow-hidden"
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact">
+                <span className="absolute inset-0 w-0 bg-dojo-300/20 group-hover:w-full transition-all duration-300 ease-out"></span>
+                <span className="relative z-10">Contact Us</span>
+              </Link>
             </Button>
           </nav>
 
@@ -116,7 +131,12 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="block py-3 text-gray-300 hover:text-dojo-300 border-b border-gray-800"
+                className={cn(
+                  "block py-3 border-b border-gray-800 transition-all duration-300",
+                  activeLink === link.path 
+                    ? "text-dojo-300 border-dojo-300/30" 
+                    : "text-gray-300 hover:text-dojo-300"
+                )}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
