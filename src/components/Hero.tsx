@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +30,7 @@ const Hero = () => {
   const dynamicTransform = {
     transform: `perspective(1000px) rotateX(${mousePosition.y * 2}deg) rotateY(${mousePosition.x * -2}deg)`
   };
-  return <section className="flex items-center pt-20 pb-28 overflow-hidden" aria-labelledby="hero-heading">
+  return <section className="flex items-center pt-20 pb-12 overflow-hidden" aria-labelledby="hero-heading">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-tr from-dojo-950 via-dojo-900 to-dojo-800 z-0" aria-hidden="true" />
       <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,rgba(255,255,255,0)_70%)]" aria-hidden="true" />
@@ -54,18 +55,9 @@ const Hero = () => {
           
           <div className={`w-1/3 h-0.5 bg-dojo-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 w-1/3' : 'opacity-0 w-0'}`} aria-hidden="true" />
           
-          <p className={`text-lg md:text-xl text-gray-300 mb-6 leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className={`text-lg md:text-xl text-gray-300 mb-2 leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             a community of faith-driven developers
           </p>
-          
-          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="mt-8 inline-block relative overflow-hidden group">
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-dojo-300/40 to-dojo-500/40 -translate-x-full group-hover:translate-x-0 transition-transform duration-300" aria-hidden="true"></span>
-              <button className="relative z-10 bg-transparent border border-dojo-300 text-dojo-300 hover:text-white px-8 py-3 rounded-md overflow-hidden transition-colors duration-300 focus-outline" aria-label="Learn more about our community">
-                Learn More
-              </button>
-            </div>
-          </div>
         </div>
       </div>
       
