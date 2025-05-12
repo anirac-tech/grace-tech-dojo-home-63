@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -23,28 +25,42 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const navLinks = [{
-    name: "Home",
-    path: "/"
-  }, {
-    name: "Team",
-    path: "/team"
-  }, {
-    name: "Projects",
-    path: "/projects"
-  }, {
-    name: "Community",
-    path: "/community"
-  }
-  // Space for future Blog link
+
+  const navLinks = [
+    {
+      name: "Home",
+      path: "/"
+    },
+    {
+      name: "Team",
+      path: "/team"
+    },
+    {
+      name: "Projects",
+      path: "/projects"
+    },
+    {
+      name: "Community",
+      path: "/community"
+    }
+    // Space for future Blog link
   ];
+
   return <header className="relative z-20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2">
-              <img src="/lovable-uploads/7a5a28ac-73a7-4b04-9445-3a3c270aa500.png" alt="GraceTechDojo Logo" className="h-8 md:h-10 w-auto transition-transform duration-300 hover:scale-105" aria-hidden="true" />
-              <span className="text-xl md:text-2xl font-serif font-semibold text-white px-0">
+            <Link to="/" className="flex items-center gap-2 group">
+              <div className="relative overflow-hidden rounded-full p-0.5 bg-gradient-to-r from-dojo-300/40 to-dojo-500/40">
+                <div className="absolute inset-0 bg-gradient-to-r from-dojo-300/20 to-dojo-500/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></div>
+                <img 
+                  src="/lovable-uploads/ff8d5297-8181-4dc0-8a9e-4ee3eb706d79.png" 
+                  alt="GraceTechDojo Logo" 
+                  className="h-8 md:h-9 w-auto rounded-full bg-gray-900 p-1 transition-all duration-300 group-hover:translate-y-[-2px]" 
+                  aria-hidden="true" 
+                />
+              </div>
+              <span className="text-xl md:text-2xl font-serif font-semibold text-white tracking-tight group-hover:text-dojo-300 transition-colors duration-300">
                 GraceTechDojo
               </span>
             </Link>
@@ -90,4 +106,5 @@ const Navbar = () => {
       </div>
     </header>;
 };
+
 export default Navbar;
