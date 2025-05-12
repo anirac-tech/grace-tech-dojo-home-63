@@ -12,7 +12,7 @@ const Projects = () => {
       </a>
       
       <Navbar />
-      <div className="min-h-screen pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800 transition-colors duration-300 relative" id="main-content">
+      <div className="min-h-screen pt-24 pb-16 bg-gradient-to-b from-gray-900/80 to-gray-800/80 transition-colors duration-300 relative" id="main-content">
         {/* Visible watermark */}
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-0 pointer-events-none">
           <div className="w-[1500px] h-[1500px] opacity-[0.12]">
