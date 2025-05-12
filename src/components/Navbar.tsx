@@ -47,7 +47,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/ff8d5297-8181-4dc0-8a9e-4ee3eb706d79.png"
+                alt="GraceTechDojo Logo" 
+                className="h-8 md:h-10 w-auto transition-transform duration-300 hover:scale-105"
+                aria-hidden="true"
+              />
               <span className="text-xl md:text-2xl font-serif font-semibold text-white px-0">
                 GraceTechDojo
               </span>
