@@ -1,14 +1,11 @@
-
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ConnectSection from "@/components/ConnectSection";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white">
+  return <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white">
       <Navbar />
       <main>
         <div className="relative">
@@ -25,7 +22,7 @@ const Index = () => {
               {/* Project section - explicitly on the left with improved visibility */}
               <div className="col-span-12 lg:col-span-3 pt-10 md:pt-20 block">
                 <div className="absolute -left-[10%] top-[20%] w-[200px] h-[200px] rounded-full bg-dojo-300/5 blur-3xl z-0" />
-                <div className="relative z-10 mx-auto w-full backdrop-blur-sm p-4 border border-gray-700/30 rounded-2xl bg-gray-800/50 shadow-xl transform transition-all duration-300 hover:scale-[1.02]">
+                <div className="relative z-10 w-full backdrop-blur-sm p-4 border border-gray-700/30 rounded-2xl bg-gray-800/50 shadow-xl transform transition-all duration-300 hover:scale-[1.02] mx-[32px]">
                   <h2 className="text-2xl font-serif text-dojo-200 mb-4">Projects</h2>
                   <ProjectsSection />
                 </div>
@@ -56,8 +53,6 @@ const Index = () => {
         </div>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
