@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white relative overflow-hidden">
       {/* Large watermarked logo in background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-80">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] transform rotate-12">
           <img
             src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
@@ -36,7 +36,7 @@ const Index = () => {
           <div className="absolute right-0 top-[30%] w-full h-[1px] bg-gradient-to-r from-transparent via-dojo-300/10 to-transparent" aria-hidden="true" />
           
           {/* Highly visible watermark positioned directly behind content - reduced opacity to 82% */}
-          <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-0 pointer-events-none">
+          <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-0 pointer-events-none opacity-80">
             <div className="w-[1500px] h-[1500px] opacity-[0.082]">
               <img
                 src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
