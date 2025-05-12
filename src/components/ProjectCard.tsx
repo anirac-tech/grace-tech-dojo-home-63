@@ -20,7 +20,7 @@ const ProjectCard = ({
   }}>
       <CardHeader className="pb-2 border-b border-gray-700/40 bg-gradient-to-r from-dojo-900/50 to-dojo-800/30 transition-colors duration-300 group-hover:from-dojo-800/50 group-hover:to-dojo-700/30 p-3">
         <CardTitle className="text-lg font-serif text-dojo-200 transition-colors duration-300 flex items-center justify-between group-hover:text-dojo-100">
-          <span>{title}</span>
+          <span className="">{title}</span>
           <div className="h-1.5 w-1.5 rounded-full bg-dojo-300/70 group-hover:bg-dojo-300 transition-all duration-300" style={{
           boxShadow: isHovered ? '0 0 8px rgba(177, 186, 208, 0.5)' : 'none'
         }}></div>
