@@ -1,12 +1,14 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare, Users } from "lucide-react";
 const ConnectSection = () => {
   return <section className="transition-colors duration-300 relative z-10" id="connect">
       <div className="container mx-auto px-2 py-6">
-        <div className="text-center mb-8">
-          <h2 className="heading-reveal heading-underline text-white mb-4">
+        <div className="text-right mb-8">
+          <h2 className="heading-reveal text-white mb-4 relative inline-block">
             Connect With Us
+            <span className="absolute -bottom-3 left-0 w-full h-0.5 bg-dojo-300"></span>
           </h2>
         </div>
         
