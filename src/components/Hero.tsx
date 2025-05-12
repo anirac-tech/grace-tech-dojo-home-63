@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
