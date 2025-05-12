@@ -44,11 +44,11 @@ const Hero = () => {
       transform: `translate(${mousePosition.x * -15}px, ${mousePosition.y * -15}px)`
     }} aria-hidden="true" />
       
-      <div className="relative z-10 w-[calc(100%-30px)]">
-        <div style={dynamicTransform} className="transition-transform duration-200 ease-out max-w-3xl mx-[65px] my-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
+        <div style={dynamicTransform} className="transition-transform duration-200 ease-out max-w-3xl mx-auto">
           <h1 id="hero-heading" className={`text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-white mb-8 leading-tight tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <span className="text-dojo-300 relative inline-block">
-              excellent
+              GraceTech Dojo
               <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-dojo-300/30 transform scale-x-100 origin-left transition-transform"></span>
             </span> software crafted with purpose
           </h1>
