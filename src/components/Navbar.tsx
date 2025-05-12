@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="/lovable-uploads/ff8d5297-8181-4dc0-8a9e-4ee3eb706d79.png"
+                src="/lovable-uploads/7a5a28ac-73a7-4b04-9445-3a3c270aa500.png"
                 alt="GraceTechDojo Logo" 
                 className="h-8 md:h-10 w-auto transition-transform duration-300 hover:scale-105"
                 aria-hidden="true"
