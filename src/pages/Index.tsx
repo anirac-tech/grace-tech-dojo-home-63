@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white relative overflow-hidden">
       {/* Large watermarked logo in background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-80">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] transform rotate-12">
           <img
             src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
