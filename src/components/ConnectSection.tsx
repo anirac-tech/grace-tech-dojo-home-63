@@ -14,8 +14,26 @@ const ConnectSection = () => {
         </div>
         
         <div className="flex flex-col md:flex-row gap-6 max-w-4xl mx-auto">
-          {/* Project Inquiries Card */}
-          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu md:w-1/2">
+          {/* Community Card - Now first on mobile, left on desktop */}
+          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu md:w-1/2 order-2 md:order-1">
+            <div className="flex items-center mb-4">
+              <div className="bg-dojo-800/80 p-3 rounded-xl mr-4">
+                <Users className="h-5 w-5 text-dojo-300" />
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-white transition-colors duration-300">
+                Join Our Community
+              </h3>
+            </div>
+            <p className="text-xl text-gray-300 mb-6 transition-colors duration-300">
+              Are you a developer looking for a supportive community that shares your values?
+            </p>
+            <Button asChild className="bg-dojo-700 hover:bg-dojo-600 text-white px-6 py-2 h-auto rounded-xl text-base transition-all duration-300 hover:translate-y-[-2px] shadow-lg hover:shadow-dojo-700/30">
+              <Link to="/community">Reach Out</Link>
+            </Button>
+          </div>
+          
+          {/* Project Inquiries Card - Now second on mobile, right on desktop */}
+          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu md:w-1/2 order-1 md:order-2">
             <div className="flex items-center mb-4 justify-end">
               <h3 className="text-xl font-serif font-semibold text-white transition-colors duration-300 mr-4">
                 Discuss Your Project
@@ -32,24 +50,6 @@ const ConnectSection = () => {
                 <Link to="/contact">Get In Touch</Link>
               </Button>
             </div>
-          </div>
-          
-          {/* Community Card */}
-          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu md:w-1/2">
-            <div className="flex items-center mb-4">
-              <div className="bg-dojo-800/80 p-3 rounded-xl mr-4">
-                <Users className="h-5 w-5 text-dojo-300" />
-              </div>
-              <h3 className="text-xl font-serif font-semibold text-white transition-colors duration-300">
-                Join Our Community
-              </h3>
-            </div>
-            <p className="text-xl text-gray-300 mb-6 transition-colors duration-300">
-              Are you a developer looking for a supportive community that shares your values?
-            </p>
-            <Button asChild className="bg-dojo-700 hover:bg-dojo-600 text-white px-6 py-2 h-auto rounded-xl text-base transition-all duration-300 hover:translate-y-[-2px] shadow-lg hover:shadow-dojo-700/30">
-              <Link to="/community">Reach Out</Link>
-            </Button>
           </div>
         </div>
       </div>
