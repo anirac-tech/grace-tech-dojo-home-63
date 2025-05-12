@@ -20,11 +20,11 @@ const ProjectCard = ({ title, description, url, linkText = "View Project" }: Pro
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        transform: isHovered ? 'translateY(-5px)' : 'translateY(0)',
+        transform: isHovered ? 'translateY(-3px)' : 'translateY(0)',
       }}
     >
-      <CardHeader className="pb-2 border-b border-gray-700/40 bg-gradient-to-r from-dojo-900/50 to-dojo-800/30 transition-colors duration-300 group-hover:from-dojo-800/50 group-hover:to-dojo-700/30">
-        <CardTitle className="text-2xl font-serif text-dojo-200 transition-colors duration-300 flex items-center justify-between group-hover:text-dojo-100">
+      <CardHeader className="pb-2 border-b border-gray-700/40 bg-gradient-to-r from-dojo-900/50 to-dojo-800/30 transition-colors duration-300 group-hover:from-dojo-800/50 group-hover:to-dojo-700/30 p-3">
+        <CardTitle className="text-lg font-serif text-dojo-200 transition-colors duration-300 flex items-center justify-between group-hover:text-dojo-100">
           <span>{title}</span>
           <div 
             className="h-1.5 w-1.5 rounded-full bg-dojo-300/70 group-hover:bg-dojo-300 transition-all duration-300"
@@ -35,12 +35,12 @@ const ProjectCard = ({ title, description, url, linkText = "View Project" }: Pro
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow flex flex-col p-3 transition-colors duration-300 relative">
-        <p className="text-xl text-gray-300 mb-2 leading-relaxed flex-grow transition-colors duration-300">{description}</p>
+        <p className="text-sm text-gray-300 mb-2 leading-relaxed flex-grow transition-colors duration-300">{description}</p>
         {url && (
           <div className="mt-auto pt-1">
             <Button 
               variant="link" 
-              className="p-0 h-auto text-dojo-300 hover:text-dojo-200 font-medium flex items-center gap-1 transition-all text-sm group-hover:translate-x-1 duration-300"
+              className="p-0 h-auto text-dojo-300 hover:text-dojo-200 font-medium flex items-center gap-1 transition-all text-xs group-hover:translate-x-1 duration-300"
               asChild
             >
               <a href={url} target="_blank" rel="noopener noreferrer">
