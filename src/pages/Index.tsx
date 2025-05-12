@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
@@ -5,7 +6,19 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ConnectSection from "@/components/ConnectSection";
 import Footer from "@/components/Footer";
 const Index = () => {
-  return <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white">
+  return <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-white relative overflow-hidden">
+      {/* Large watermarked logo in background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] transform rotate-12">
+          <img
+            src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
+            alt=""
+            className="w-full h-full filter contrast-125 brightness-150"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+      
       {/* Skip to content link for accessibility */}
       <a href="#main-content" className="skip-link">
         Skip to content

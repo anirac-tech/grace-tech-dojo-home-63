@@ -49,18 +49,6 @@ const Navbar = () => {
 
   return (
     <header className="relative z-20">
-      {/* Watermark background logo - large, barely visible, embossed effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -left-20 w-[400px] h-[400px] opacity-[0.03] transform rotate-12">
-          <img
-            src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
-            alt=""
-            className="w-full h-full filter contrast-125 brightness-150"
-            aria-hidden="true"
-          />
-        </div>
-      </div>
-      
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
