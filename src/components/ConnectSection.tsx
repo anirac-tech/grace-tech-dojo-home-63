@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare, Users } from "lucide-react";
@@ -13,7 +14,7 @@ const ConnectSection = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-6 max-w-4xl mx-auto">
-          {/* Community Card - Now first on mobile, left on desktop */}
+          {/* Community Card - Always on left for sm screens and up */}
           <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu sm:w-1/2 order-2 sm:order-1">
             <div className="flex items-center mb-4">
               <div className="bg-dojo-800/80 p-3 rounded-xl mr-4">
@@ -31,7 +32,7 @@ const ConnectSection = () => {
             </Button>
           </div>
           
-          {/* Project Inquiries Card - Now second on mobile, right on desktop */}
+          {/* Project Inquiries Card - Always on right for sm screens and up */}
           <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl p-6 rounded-2xl border-2 border-gray-700/50 shadow-2xl hover:shadow-dojo-300/20 transition-all duration-500 hover:translate-y-[-4px] transform-gpu sm:w-1/2 order-1 sm:order-2">
             <div className="flex items-center mb-4 justify-end">
               <h3 className="text-xl font-serif font-semibold text-white transition-colors duration-300 mr-4">
