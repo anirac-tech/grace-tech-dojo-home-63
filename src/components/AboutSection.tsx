@@ -6,9 +6,8 @@ const AboutSection = () => {
     <section id="about" className="h-full">
       <div className="h-full">
         <div className="mb-6">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block">
+          <h2 className="heading-reveal heading-underline-left text-white mb-4">
             About Us
-            <span className="absolute -bottom-3 left-0 right-0 h-0.5 bg-dojo-300"></span>
           </h2>
         </div>
         <div className="prose max-w-none text-gray-300 transition-colors duration-300">

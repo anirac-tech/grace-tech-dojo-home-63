@@ -8,9 +8,8 @@ const ConnectSection = () => {
     <section className="transition-colors duration-300 relative z-10" id="connect">
       <div className="container mx-auto px-2 py-6">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-4 relative inline-block">
+          <h2 className="heading-reveal heading-underline text-white mb-4">
             Connect With Us
-            <span className="absolute -bottom-3 left-1/4 right-1/4 h-0.5 bg-dojo-300"></span>
           </h2>
         </div>
         

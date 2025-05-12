@@ -37,28 +37,28 @@ const Community = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen pt-24 pb-16">
+      <div className="min-h-screen pt-24 pb-16 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-900 mb-6 text-center">
+          <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-100 mb-6 text-center heading-reveal">
             Join Our Community
           </h1>
-          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
             Connect with a community of faith-driven developers committed to excellence in craft and character.
           </p>
           
-          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-            <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">
+          <div className="max-w-3xl mx-auto bg-gray-800/90 p-8 rounded-lg shadow-sm border border-gray-700/30">
+            <h2 className="heading-reveal heading-card">
               Express Your Interest
             </h2>
             <Separator className="mb-6" />
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-300 mb-6">
               Fill out this brief interest form, and we'll get back to you about getting involved with GraceTechDojo.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-gray-700">
+                  <label htmlFor="name" className="text-sm font-medium text-gray-300">
                     Name
                   </label>
                   <Input
@@ -68,11 +68,11 @@ const Community = () => {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
-                    className="w-full"
+                    className="w-full bg-gray-700/50 border-gray-600"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                  <label htmlFor="email" className="text-sm font-medium text-gray-300">
                     Email
                   </label>
                   <Input
@@ -83,13 +83,13 @@ const Community = () => {
                     onChange={handleChange}
                     placeholder="Your email"
                     required
-                    className="w-full"
+                    className="w-full bg-gray-700/50 border-gray-600"
                   />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-gray-700">
+                <label htmlFor="message" className="text-sm font-medium text-gray-300">
                   Tell us about yourself and why you're interested
                 </label>
                 <Textarea
@@ -99,7 +99,7 @@ const Community = () => {
                   onChange={handleChange}
                   placeholder="Share a bit about your background, skills, interests, and how you'd like to contribute or benefit from our community..."
                   required
-                  className="min-h-[150px]"
+                  className="min-h-[150px] bg-gray-700/50 border-gray-600"
                 />
               </div>
               

@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap');
 
 @tailwind base;
@@ -46,6 +45,11 @@
 
     --radius: 0.5rem;
   }
+
+  /* Add consistent h2 styling */
+  h2 {
+    @apply font-serif font-semibold text-2xl md:text-3xl relative;
+  }
 }
 
 /* Set the initial background-color on html element to prevent white flash */
@@ -86,6 +90,27 @@ html {
   .skip-link {
     @apply absolute left-4 top-4 z-50 bg-dojo-300 text-gray-900 px-4 py-2 rounded transform -translate-y-16 focus:translate-y-0 transition-transform;
   }
+  
+  /* Heading style variations */
+  .heading-underline {
+    @apply after:content-[''] after:absolute after:-bottom-3 after:left-0 after:right-0 after:mx-auto after:w-24 after:h-0.5 after:bg-dojo-300;
+  }
+  
+  .heading-underline-left {
+    @apply after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-full after:h-0.5 after:bg-dojo-300;
+  }
+  
+  .heading-card {
+    @apply mb-4 text-white;
+  }
+  
+  .heading-sidebar {
+    @apply text-dojo-200;
+  }
+  
+  .heading-form {
+    @apply text-gray-800 mb-4;
+  }
 }
 
 /* Add smooth animations */
@@ -100,4 +125,20 @@ html {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Add heading reveal animation */
+@keyframes heading-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading-reveal {
+  animation: heading-reveal 0.7s ease-out forwards;
 }
