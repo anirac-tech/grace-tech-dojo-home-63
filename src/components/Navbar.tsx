@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,6 +49,18 @@ const Navbar = () => {
 
   return (
     <header className="relative z-20">
+      {/* Watermark background logo - large, barely visible, embossed effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-20 -left-20 w-[400px] h-[400px] opacity-[0.03] transform rotate-12">
+          <img
+            src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
+            alt=""
+            className="w-full h-full filter contrast-125 brightness-150"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+      
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -59,29 +70,18 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
             >
               <Link to="/" className="flex items-center gap-3 group">
-                <div className="relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-dojo-300 to-dojo-500 rounded-md opacity-75 blur-sm group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative hexagon-container bg-gray-900 rounded-md overflow-hidden p-0.5">
-                    <img 
-                      src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png" 
-                      alt="GraceTechDojo Logo" 
-                      className="h-9 md:h-10 w-auto transition-all duration-300 group-hover:scale-105" 
-                      aria-hidden="true" 
-                    />
-                  </div>
+                <div className="relative bg-gray-900/80 backdrop-blur-sm p-2 rounded-md overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-dojo-500/10 to-dojo-300/10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                  <img 
+                    src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png" 
+                    alt="GraceTechDojo Logo" 
+                    className="h-9 md:h-10 w-auto transition-transform duration-300 group-hover:scale-105" 
+                    aria-hidden="true" 
+                  />
                 </div>
-                <div className="flex items-center">
-                  <span className="text-xl md:text-2xl font-serif font-semibold text-white tracking-tight group-hover:text-dojo-300 transition-colors duration-300">
-                    GraceTechDojo
-                  </span>
-                  <motion.div 
-                    animate={{ rotate: [0, 15, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    className="ml-1 text-dojo-300 hidden md:block"
-                  >
-                    <Sparkles size={16} />
-                  </motion.div>
-                </div>
+                <span className="text-xl md:text-2xl font-serif font-semibold text-white tracking-tight group-hover:text-dojo-300 transition-colors duration-300">
+                  GraceTechDojo
+                </span>
               </Link>
             </motion.div>
           </div>
