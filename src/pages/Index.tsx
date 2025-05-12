@@ -35,14 +35,16 @@ const Index = () => {
           <div className="absolute left-0 top-[10%] w-full h-[1px] bg-gradient-to-r from-transparent via-dojo-300/20 to-transparent" aria-hidden="true" />
           <div className="absolute right-0 top-[30%] w-full h-[1px] bg-gradient-to-r from-transparent via-dojo-300/10 to-transparent" aria-hidden="true" />
           
-          {/* Repositioned watermarked logo to be behind content but more visible */}
-          <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[900px] h-[900px] z-0 opacity-[0.04] pointer-events-none transform rotate-12">
-            <img
-              src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
-              alt=""
-              className="w-full h-full filter contrast-125 brightness-150"
-              aria-hidden="true"
-            />
+          {/* Main watermarked logo strategically placed as a background element */}
+          <div className="absolute inset-0 flex items-center justify-center z-[1] pointer-events-none">
+            <div className="w-[1200px] h-[1200px] opacity-[0.06] transform rotate-6">
+              <img
+                src="/lovable-uploads/0babf9a5-44a4-4c82-a1bd-f76047dec86c.png"
+                alt=""
+                className="w-full h-full filter contrast-150 brightness-125 saturate-50"
+                aria-hidden="true"
+              />
+            </div>
           </div>
           
           <div className="container mx-auto px-4 pb-20">
