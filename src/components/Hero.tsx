@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,16 +31,16 @@ const Hero = () => {
     transform: `perspective(1000px) rotateX(${mousePosition.y * 2}deg) rotateY(${mousePosition.x * -2}deg)`
   };
   return <section className="flex items-center pt-20 pb-12 overflow-hidden" aria-labelledby="hero-heading">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-dojo-950 via-dojo-900 to-dojo-800 z-0" aria-hidden="true" />
-      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,rgba(255,255,255,0)_70%)]" aria-hidden="true" />
+      {/* Background decoration - updated to 60% opacity */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-dojo-950/60 via-dojo-900/60 to-dojo-800/60 z-0" aria-hidden="true" />
+      <div className="absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,rgba(255,255,255,0)_70%)]" aria-hidden="true" />
       
-      {/* 3D effect decorative elements - moved below header with lower z-index */}
-      <div className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-dojo-300/10 backdrop-blur-3xl bg-dojo-300/5 -z-10 transition-transform duration-200 ease-out" style={{
+      {/* 3D effect decorative elements - updated to 60% opacity */}
+      <div className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-dojo-300/60 backdrop-blur-3xl bg-dojo-300/60 -z-10 transition-transform duration-200 ease-out" style={{
       transform: `translate(${mousePosition.x * 10}px, ${mousePosition.y * 10}px)`
     }} aria-hidden="true" />
       
-      <div className="absolute bottom-20 left-20 w-[300px] h-[300px] rounded-full border border-dojo-500/5 backdrop-blur-xl bg-dojo-500/5 -z-10 transition-transform duration-300 ease-out" style={{
+      <div className="absolute bottom-20 left-20 w-[300px] h-[300px] rounded-full border border-dojo-500/60 backdrop-blur-xl bg-dojo-500/60 -z-10 transition-transform duration-300 ease-out" style={{
       transform: `translate(${mousePosition.x * -15}px, ${mousePosition.y * -15}px)`
     }} aria-hidden="true" />
       
@@ -62,7 +63,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Bottom decorative element - reduced opacity from default to 60% */}
+      {/* Bottom decorative element - already at 60% opacity */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900/60 to-transparent z-0" aria-hidden="true" />
     </section>;
 };
