@@ -58,18 +58,42 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+                // Updated dojo palette with richer, more thematic colors
                 dojo: {
-                    '50': '#f6f7f9',
-                    '100': '#eceef2',
-                    '200': '#d5d9e2',
-                    '300': '#b1bad0',
-                    '400': '#8696b6',
-                    '500': '#66789c',
-                    '600': '#506081',
-                    '700': '#414e69',
-                    '800': '#374358',
-                    '900': '#313a4b',
-                    '950': '#1e2330',
+                    '50': '#f4f6fc',
+                    '100': '#e8ecf8',
+                    '200': '#d5dcf3',
+                    '300': '#b4c1ec', // Grace - softer, elegant blue-purple
+                    '400': '#95a5e2',
+                    '500': '#7186d9', // Tech - vibrant medium blue-purple
+                    '600': '#5968cc',
+                    '700': '#4d54b9', // Dojo - deeper, more authoritative blue-purple
+                    '800': '#404689',
+                    '900': '#383c6d',
+                    '950': '#22253e',
+                },
+                // New color groups specifically representing Grace, Tech and Dojo
+                grace: {
+                    '100': '#f5effc',
+                    '200': '#ead9f9',
+                    '300': '#d9b8f2',
+                    '400': '#c28fe6',
+                    '500': '#a961d4', // Primary Grace color
+                    '600': '#9442bb',
+                    '700': '#7e349d',
+                    '800': '#652c7e',
+                    '900': '#4e2460',
+                },
+                tech: {
+                    '100': '#e9f7fe',
+                    '200': '#c7ebfd',
+                    '300': '#93d8fa',
+                    '400': '#5abef5',
+                    '500': '#2e9ceb', // Primary Tech color
+                    '600': '#1b7fd0',
+                    '700': '#1a63ab',
+                    '800': '#1c5289',
+                    '900': '#1c4671',
                 },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
