@@ -58,6 +58,36 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+                // Added new warm color
+                warm: {
+                    DEFAULT: 'hsl(var(--warm))',
+                    foreground: 'hsl(var(--warm-foreground))',
+                    '50': '#fff6ed',
+                    '100': '#ffebd5',
+                    '200': '#ffd2a9',
+                    '300': '#ffb272', // Soft warm orange
+                    '400': '#fd8943',
+                    '500': '#fa6419', // Primary warm color
+                    '600': '#e6480f',
+                    '700': '#bd340f',
+                    '800': '#992c14',
+                    '900': '#7d2814',
+                },
+                // Added new peach color
+                peach: {
+                    DEFAULT: 'hsl(var(--peach))',
+                    foreground: 'hsl(var(--peach-foreground))',
+                    '50': '#fff9ed',
+                    '100': '#fff1d3',
+                    '200': '#ffe0a6',
+                    '300': '#fec6a1', // Soft peach
+                    '400': '#fda77a',
+                    '500': '#fc8550', // Primary peach color
+                    '600': '#f56134',
+                    '700': '#dd4320',
+                    '800': '#b6351d',
+                    '900': '#953120',
+                },
                 // Updated dojo palette with richer, more thematic colors
                 dojo: {
                     '50': '#f4f6fc',

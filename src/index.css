@@ -32,6 +32,14 @@
     --accent: 270 60% 60%;
     --accent-foreground: 210 40% 98%;
 
+    /* Added new warm accent color */
+    --warm: 20 85% 60%;
+    --warm-foreground: 210 40% 98%;
+
+    /* Added new peach accent color */
+    --peach: 28 100% 86%;
+    --peach-foreground: 240 35% 15%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
@@ -130,6 +138,15 @@ html {
   
   .dojo-gradient {
     @apply bg-gradient-to-r from-dojo-800 via-dojo-700 to-dojo-600;
+  }
+  
+  /* New warm gradients */
+  .warm-gradient {
+    @apply bg-gradient-to-r from-warm-700 via-warm-500 to-warm-300;
+  }
+  
+  .peach-gradient {
+    @apply bg-gradient-to-r from-peach-600 to-peach-300;
   }
 }
 
